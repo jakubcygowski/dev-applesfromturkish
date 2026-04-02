@@ -88,7 +88,7 @@ export default function AppleCard({
         </p>
         <a
           href="/contact"
-          className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-brand-green hover:text-brand-green-dark transition-all duration-300 group/link"
+          className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-brand-green-dark hover:text-brand-green transition-all duration-300 group/link"
         >
           Inquire Now
           <svg className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
