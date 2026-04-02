@@ -175,7 +175,7 @@ export default function ContactPage() {
                   <div className="sm:col-span-2">
                     <button
                       type="submit"
-                      className="w-full bg-brand-green text-white font-semibold py-4 rounded-xl text-lg cursor-pointer hover:bg-brand-green-dark transition-colors duration-300"
+                      className="w-full bg-brand-green-dark text-white font-semibold py-4 rounded-xl text-lg cursor-pointer hover:bg-brand-green transition-colors duration-300"
                     >
                       Send Inquiry &rarr;
                     </button>

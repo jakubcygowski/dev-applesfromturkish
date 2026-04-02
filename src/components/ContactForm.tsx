@@ -149,7 +149,7 @@ export default function ContactForm() {
             <div className="sm:col-span-2">
               <button
                 type="submit"
-                className="w-full bg-brand-green text-white font-semibold py-4 rounded-xl text-lg cursor-pointer shadow-lg shadow-brand-green/20 hover:bg-brand-green-dark transition-colors duration-300"
+                className="w-full bg-brand-green-dark text-white font-semibold py-4 rounded-xl text-lg cursor-pointer shadow-lg shadow-brand-green/20 hover:bg-brand-green transition-colors duration-300"
               >
                 Send Inquiry
                 <span className="ml-2">&rarr;</span>

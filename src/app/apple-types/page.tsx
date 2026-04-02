@@ -224,7 +224,7 @@ export default function AppleTypesPage() {
 
                     <a
                       href="/contact"
-                      className="inline-block mt-6 bg-brand-green text-white font-semibold px-8 py-3 rounded-full hover:bg-brand-green-dark transition-colors duration-300"
+                      className="inline-block mt-6 bg-brand-green-dark text-white font-semibold px-8 py-3 rounded-full hover:bg-brand-green transition-colors duration-300"
                     >
                       Inquire About {apple.name} &rarr;
                     </a>

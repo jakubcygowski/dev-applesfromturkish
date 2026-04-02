@@ -44,7 +44,7 @@ export default function ProcessSection() {
 
               <div className="relative p-8 pr-20">
                 {/* Step Number Badge */}
-                <span className="inline-flex items-center justify-center w-10 h-10 bg-brand-green rounded-full text-white text-base font-bold mb-4 group-hover:scale-110 transition-transform duration-300">
+                <span className="inline-flex items-center justify-center w-10 h-10 bg-brand-green-dark rounded-full text-white text-base font-bold mb-4 group-hover:scale-110 transition-transform duration-300">
                   {step.number}
                 </span>
 

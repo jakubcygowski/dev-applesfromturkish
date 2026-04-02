@@ -56,7 +56,7 @@ export default function GlobalMarketsSection() {
         <div className="text-center mt-12">
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 bg-brand-green text-white font-semibold px-10 py-4 rounded-full text-lg shadow-lg shadow-brand-green/20 hover:bg-brand-green-dark transition-colors duration-300"
+            className="inline-flex items-center gap-2 bg-brand-green-dark text-white font-semibold px-10 py-4 rounded-full text-lg shadow-lg shadow-brand-green/20 hover:bg-brand-green transition-colors duration-300"
           >
             Contact Us
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
