@@ -236,13 +236,13 @@ export default function PrivacyPolicyPage() {
           <ul>
             <li>
               <strong>Email:</strong>{" "}
-              <a href="mailto:contact@applesfromturkey.com">
-                contact@applesfromturkey.com
+              <a href="mailto:hello@example.com">
+                hello@example.com
               </a>
             </li>
             <li>
               <strong>Phone:</strong>{" "}
-              <a href="tel:+48733643773">+48 733 643 773</a>
+              <a href="tel:+00000000000">+00 000 000 000</a>
             </li>
             <li>
               <strong>Address:</strong> XXX

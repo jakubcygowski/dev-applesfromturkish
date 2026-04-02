@@ -210,10 +210,10 @@ export default function ContactPage() {
                     <div>
                       <p className="font-medium text-gray-900">Phone</p>
                       <a
-                        href="tel:+48733643773"
+                        href="tel:+00000000000"
                         className="text-gray-500 hover:text-brand-green transition-colors"
                       >
-                        +48 733 643 773
+                        +00 000 000 000
                       </a>
                     </div>
                   </li>
@@ -224,10 +224,10 @@ export default function ContactPage() {
                     <div>
                       <p className="font-medium text-gray-900">Email</p>
                       <a
-                        href="mailto:contact@applesfromturkey.com"
+                        href="mailto:hello@example.com"
                         className="text-gray-500 hover:text-brand-green transition-colors"
                       >
-                        contact@applesfromturkey.com
+                        hello@example.com
                       </a>
                     </div>
                   </li>
