@@ -25,12 +25,17 @@ export default function AppleCard({
   return (
     <div className="group relative bg-white rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-green/10 border border-gray-100">
       {/* Image Carousel */}
-      <div className={`relative aspect-[3/2] bg-gradient-to-br ${color} overflow-hidden`}>
+      <div className={`relative aspect-square bg-gradient-to-br ${color} overflow-hidden`}>
         <img
           src={images[currentIndex]}
           alt={`${name} apple`}
           className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
         />
+
+        {/* Turkey Origin Badge */}
+        <div className="absolute top-3 left-3 bg-[#E30A17] text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg">
+          Turkey Origin
+        </div>
 
         {/* Gradient overlay on image */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -83,7 +88,7 @@ export default function AppleCard({
         <h3 className="text-lg font-bold text-gray-900 mb-1.5 group-hover:text-brand-green transition-colors duration-300">
           {name}
         </h3>
-        <p className="text-sm text-gray-600 leading-relaxed line-clamp-2">
+        <p className="text-sm text-gray-600 leading-relaxed">
           {description}
         </p>
         <a

@@ -24,11 +24,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        solid
-          ? "bg-white shadow-lg shadow-black/5"
-          : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm shadow-black/5"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18">
@@ -43,11 +39,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className={`relative text-sm font-medium transition-colors duration-300 after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-green after:transition-all after:duration-300 hover:after:w-full ${
-                  solid
-                    ? "text-gray-600 hover:text-brand-green"
-                    : "text-white/80 hover:text-white"
-                }`}
+                className="relative text-sm font-medium text-gray-600 hover:text-brand-green transition-colors duration-300 after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-green after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.label}
               </a>
@@ -63,9 +55,7 @@ export default function Navbar() {
 
           {/* Mobile Toggle */}
           <button
-            className={`md:hidden p-2 rounded-lg transition-colors ${
-              solid ? "text-gray-700" : "text-white"
-            }`}
+            className="md:hidden p-2 rounded-lg transition-colors text-gray-700"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >

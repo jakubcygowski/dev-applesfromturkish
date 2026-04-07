@@ -1,10 +1,10 @@
 const markets = [
-  { flag: "🇮🇳", name: "India", desc: "We deliver apples for India's rapidly growing retail and wholesale sectors. With demand rising year-on-year, our Gala, Red and Fuji varieties are a preferred choice among Indian importers looking for consistent quality and competitive pricing." },
-  { flag: "🇮🇶", name: "Iraq", desc: "As a key trading partner, we supply apples for Iraq through established logistics routes. Our year-round availability and export-grade packaging ensure Iraqi wholesalers receive fresh, premium fruit with every shipment." },
-  { flag: "🇦🇪", name: "UAE", desc: "Our premium varieties are a natural fit as apples for UAE's high-end retail and hospitality markets. We work closely with Emirates-based distributors to meet strict quality and presentation standards." },
-  { flag: "🇸🇦", name: "Saudi Arabia", desc: "We provide apples for Saudi Arabia's wholesale market, meeting the Kingdom's rigorous import requirements. Our cold-chain logistics guarantee freshness from Isparta orchards to Saudi distribution centres." },
-  { flag: "🇪🇬", name: "Egypt", desc: "Our expanding partnerships position us as a reliable source of apples for Egypt. We work with major Egyptian importers and distributors who value stable supply, competitive pricing and consistent caliber." },
-  { flag: "🇳🇱", name: "Netherlands", desc: "The Netherlands serves as our gateway for apples for Europe. Through Rotterdam's world-class distribution network, we reach wholesalers across the EU with efficient logistics and full traceability." },
+  { flag: "🇮🇳", name: "India", desc: "We deliver apples for India's growing wholesale and retail sectors. Gala, Red and Fuji varieties with consistent quality and competitive pricing." },
+  { flag: "🇮🇶", name: "Iraq", desc: "We supply apples for Iraq through established logistics routes with year-round availability and export-grade packaging." },
+  { flag: "🇦🇪", name: "UAE", desc: "Premium apples for UAE's high-end retail and hospitality markets, meeting strict quality and presentation standards." },
+  { flag: "🇸🇦", name: "Saudi Arabia", desc: "We provide apples for Saudi Arabia's wholesale market with cold-chain logistics from Isparta orchards to Saudi distribution centres." },
+  { flag: "🇪🇬", name: "Egypt", desc: "A reliable source of apples for Egypt — stable supply, competitive pricing and consistent caliber for importers." },
+  { flag: "🇳🇱", name: "Netherlands", desc: "Our gateway for apples for Europe — reaching EU wholesalers through Rotterdam's distribution network with full traceability." },
 ];
 
 export default function GlobalMarketsSection() {

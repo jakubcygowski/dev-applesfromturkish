@@ -22,7 +22,7 @@ export default function ContactForm() {
     "w-full bg-gray-50/80 border border-gray-200 rounded-xl px-4 py-3.5 text-sm focus:ring-2 focus:ring-brand-green/30 focus:border-brand-green focus:bg-white outline-none transition-all duration-300 hover:border-gray-300";
 
   return (
-    <section id="contact" className="relative z-20 -mt-24 px-4">
+    <section id="contact" className="relative z-20 mt-8 px-4">
       <div className="max-w-3xl mx-auto">
         {/* Gradient glow behind card */}
         <div className="absolute inset-0 -z-10 mx-auto max-w-2xl h-64 bg-gradient-to-r from-brand-green/20 via-brand-lime/20 to-brand-emerald/20 blur-3xl rounded-full" />

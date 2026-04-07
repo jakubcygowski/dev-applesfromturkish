@@ -8,7 +8,7 @@ export default function PreparationSection() {
   ];
 
   return (
-    <section id="preparation" className="relative py-24 sm:py-32 bg-white overflow-hidden">
+    <section id="preparation" className="relative pt-12 sm:pt-16 pb-24 sm:pb-32 bg-white overflow-hidden">
       {/* Background accent */}
       <div className="absolute -left-40 top-1/2 -translate-y-1/2 w-80 h-[600px] bg-gradient-to-r from-brand-green-light to-transparent rounded-r-full opacity-60" />
 
