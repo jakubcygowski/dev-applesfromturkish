@@ -259,15 +259,19 @@ export default function ContactPage() {
                 </ul>
               </div>
 
-              {/* Map placeholder */}
-              <div className="rounded-2xl overflow-hidden bg-gray-100 aspect-[4/3] flex items-center justify-center border border-gray-100">
-                <div className="text-center text-gray-400">
-                  <span className="text-4xl block mb-2">🗺️</span>
-                  <p className="text-sm">Map placeholder</p>
-                  <p className="text-xs text-gray-300 mt-1">
-                    Region: Isparta, Turkey
-                  </p>
-                </div>
+              {/* Google Map - Isparta Region */}
+              <div className="rounded-2xl overflow-hidden border border-gray-100 aspect-[4/3]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125710.96384195393!2d30.52344715!3d37.76264665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c3395a1b99d6af%3A0x547c38a5e8837581!2sIsparta%2C%20Turkey!5e0!3m2!1sen!2spl!4v1713033600000!5m2!1sen!2spl"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Isparta Region, Turkey"
+                  className="w-full h-full"
+                />
               </div>
             </div>
           </div>
