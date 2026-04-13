@@ -93,7 +93,7 @@ export default function HeroSection() {
           {/* H1 */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.1] mb-6">
             Apples from Turkey{" "}
-            <span className="text-brand-green">- Exported worldwide</span>
+            <span className="text-brand-green">Exported worldwide</span>
           </h1>
 
           {/* Subtitle */}
