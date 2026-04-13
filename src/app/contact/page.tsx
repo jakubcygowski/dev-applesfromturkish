@@ -149,7 +149,7 @@ export default function ContactPage() {
                         setFormData({ ...formData, phone: e.target.value })
                       }
                       className={inputClasses}
-                      placeholder="+90 555 000 0000"
+                      placeholder="+48 517 740 099"
                     />
                   </div>
 
@@ -210,10 +210,10 @@ export default function ContactPage() {
                     <div>
                       <p className="font-medium text-gray-900">Phone</p>
                       <a
-                        href="tel:+00000000000"
+                        href="tel:+48517740099"
                         className="text-gray-500 hover:text-brand-green transition-colors"
                       >
-                        +00 000 000 000
+                        +48 517 740 099
                       </a>
                     </div>
                   </li>

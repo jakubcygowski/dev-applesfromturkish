@@ -121,7 +121,7 @@ export default function ContactForm() {
                   setFormData({ ...formData, phone: e.target.value })
                 }
                 className={inputClasses}
-                placeholder="+90 555 000 0000"
+                placeholder="+48 517 740 099"
               />
             </div>
 

@@ -242,7 +242,7 @@ export default function PrivacyPolicyPage() {
             </li>
             <li>
               <strong>Phone:</strong>{" "}
-              <a href="tel:+00000000000">+00 000 000 000</a>
+              <a href="tel:+48517740099">+48 517 740 099</a>
             </li>
             <li>
               <strong>Address:</strong> XXX
