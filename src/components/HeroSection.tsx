@@ -88,7 +88,20 @@ export default function HeroSection() {
         <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-white via-white/40 to-transparent" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[76px] pb-8">
+      {/* Mobile Hero Image - shown only on mobile/tablet */}
+      <div className="lg:hidden relative z-10 pt-[76px]">
+        <div className="relative h-[280px] sm:h-[360px] overflow-hidden">
+          <img
+            src="/hero-apples.webp"
+            alt="Premium Turkish apples ready for export"
+            className="w-full h-full object-cover object-center"
+          />
+          {/* Gradient fade on bottom edge */}
+          <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-white via-white/60 to-transparent" />
+        </div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pt-[76px] pb-8">
         <div className="max-w-xl lg:min-h-[480px] flex flex-col justify-start pt-4">
           {/* H1 */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.1] mb-6">
