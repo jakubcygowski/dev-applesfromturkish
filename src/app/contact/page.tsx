@@ -31,11 +31,23 @@ export default function ContactPage() {
     phone: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    alert("Thank you! We will get back to you shortly.");
-    setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) throw new Error("Failed");
+      setStatus("success");
+      setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+    } catch {
+      setStatus("error");
+    }
   };
 
   const inputClasses =
@@ -175,10 +187,17 @@ export default function ContactPage() {
                   <div className="sm:col-span-2">
                     <button
                       type="submit"
-                      className="w-full bg-brand-green text-white font-semibold py-4 rounded-xl text-lg cursor-pointer hover:bg-brand-green-dark transition-colors duration-300"
+                      disabled={status === "sending"}
+                      className="w-full bg-brand-green text-white font-semibold py-4 rounded-xl text-lg cursor-pointer hover:bg-brand-green-dark transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
                     >
-                      Send Inquiry &rarr;
+                      {status === "sending" ? "Sending..." : "Send Inquiry \u2192"}
                     </button>
+                    {status === "success" && (
+                      <p className="text-center text-sm text-brand-green-dark mt-4">Thank you! We'll reply within 24 hours.</p>
+                    )}
+                    {status === "error" && (
+                      <p className="text-center text-sm text-red-600 mt-4">Something went wrong. Please email us at contact@applesfromturkey.com.</p>
+                    )}
                   </div>
                 </form>
 

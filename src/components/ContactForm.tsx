@@ -10,12 +10,23 @@ export default function ContactForm() {
     phone: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // TODO: integrate with API route or email service
-    alert("Thank you! We will get back to you shortly.");
-    setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) throw new Error("Failed");
+      setStatus("success");
+      setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+    } catch {
+      setStatus("error");
+    }
   };
 
   const inputClasses =
@@ -149,11 +160,18 @@ export default function ContactForm() {
             <div className="sm:col-span-2">
               <button
                 type="submit"
-                className="w-full bg-brand-green-dark text-white font-semibold py-4 rounded-xl text-lg cursor-pointer shadow-lg shadow-brand-green/20 hover:bg-brand-green transition-colors duration-300"
+                disabled={status === "sending"}
+                className="w-full bg-brand-green-dark text-white font-semibold py-4 rounded-xl text-lg cursor-pointer shadow-lg shadow-brand-green/20 hover:bg-brand-green transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Send Inquiry
-                <span className="ml-2">&rarr;</span>
+                {status === "sending" ? "Sending..." : "Send Inquiry"}
+                {status !== "sending" && <span className="ml-2">&rarr;</span>}
               </button>
+              {status === "success" && (
+                <p className="text-center text-sm text-brand-green-dark mt-4">Thank you! We'll reply within 24 hours.</p>
+              )}
+              {status === "error" && (
+                <p className="text-center text-sm text-red-600 mt-4">Something went wrong. Please email us at contact@applesfromturkey.com.</p>
+              )}
             </div>
           </form>
         </div>
