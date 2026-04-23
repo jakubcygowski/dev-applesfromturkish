@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { whatsappUrl } from "@/config/contact";
 
 const links = [
   { label: "Apple Types", href: "/apple-types" },
@@ -45,7 +46,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://wa.me/48517740099?text=Hello%2C%20I'm%20interested%20in%20Turkish%20apples."
+              href={whatsappUrl()}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-green-500 text-white text-sm font-semibold px-6 py-2.5 rounded-full shadow-md hover:bg-green-600 transition-colors duration-300"
@@ -92,7 +93,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://wa.me/48517740099?text=Hello%2C%20I'm%20interested%20in%20Turkish%20apples."
+            href={whatsappUrl()}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}

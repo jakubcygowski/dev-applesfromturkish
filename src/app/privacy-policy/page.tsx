@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import type { Metadata } from "next";
+import { contactConfig, telHref, mailtoHref } from "@/config/contact";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -236,14 +237,14 @@ export default function PrivacyPolicyPage() {
           <ul>
             <li>
               <strong>Email:</strong>{" "}
-              <a href="mailto:contact@applesfromturkey.com">contact@applesfromturkey.com</a>
+              <a href={mailtoHref}>{contactConfig.email}</a>
             </li>
             <li>
               <strong>Phone:</strong>{" "}
-              <a href="tel:+48517740099">+48 517 740 099</a>
+              <a href={telHref}>{contactConfig.phone}</a>
             </li>
             <li>
-              <strong>Address:</strong> Isparta, Turkey
+              <strong>Address:</strong> {contactConfig.address}
             </li>
           </ul>
         </article>

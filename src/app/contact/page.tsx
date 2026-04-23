@@ -4,6 +4,7 @@ import { useState, FormEvent } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { contactConfig, telHref, mailtoHref, whatsappUrl } from "@/config/contact";
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
@@ -161,7 +162,7 @@ export default function ContactPage() {
                         setFormData({ ...formData, phone: e.target.value })
                       }
                       className={inputClasses}
-                      placeholder="+48 517 740 099"
+                      placeholder={contactConfig.phone}
                     />
                   </div>
 
@@ -196,7 +197,7 @@ export default function ContactPage() {
                       <p className="text-center text-sm text-brand-green-dark mt-4">Thank you! We'll reply within 24 hours.</p>
                     )}
                     {status === "error" && (
-                      <p className="text-center text-sm text-red-600 mt-4">Something went wrong. Please email us at contact@applesfromturkey.com.</p>
+                      <p className="text-center text-sm text-red-600 mt-4">Something went wrong. Please email us at {contactConfig.email}.</p>
                     )}
                   </div>
                 </form>
@@ -263,7 +264,7 @@ export default function ContactPage() {
                     <div>
                       <p className="font-medium text-gray-900">Address</p>
                       <p className="text-gray-500">
-                        Region: Isparta, Turkey
+                        {contactConfig.addressLabel}
                       </p>
                     </div>
                   </li>
@@ -274,10 +275,10 @@ export default function ContactPage() {
                     <div>
                       <p className="font-medium text-gray-900">Phone</p>
                       <a
-                        href="tel:+48517740099"
+                        href={telHref}
                         className="text-gray-500 hover:text-brand-green transition-colors"
                       >
-                        +48 517 740 099
+                        {contactConfig.phone}
                       </a>
                     </div>
                   </li>
@@ -288,10 +289,10 @@ export default function ContactPage() {
                     <div>
                       <p className="font-medium text-gray-900">Email</p>
                       <a
-                        href="mailto:contact@applesfromturkey.com"
+                        href={mailtoHref}
                         className="text-gray-500 hover:text-brand-green transition-colors"
                       >
-                        contact@applesfromturkey.com
+                        {contactConfig.email}
                       </a>
                     </div>
                   </li>
@@ -299,7 +300,7 @@ export default function ContactPage() {
 
                 {/* WhatsApp Button */}
                 <a
-                  href="https://wa.me/48517740099?text=Hello%2C%20I'm%20interested%20in%20Turkish%20apples."
+                  href={whatsappUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-6 flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-3 rounded-xl transition-colors duration-300"
@@ -339,7 +340,7 @@ export default function ContactPage() {
               {/* Google Map - Isparta Region */}
               <div className="rounded-2xl overflow-hidden border border-gray-100 aspect-[4/3]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125710.96384195393!2d30.52344715!3d37.76264665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c3395a1b99d6af%3A0x547c38a5e8837581!2sIsparta%2C%20Turkey!5e0!3m2!1sen!2spl!4v1713033600000!5m2!1sen!2spl"
+                  src={contactConfig.mapEmbedUrl}
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

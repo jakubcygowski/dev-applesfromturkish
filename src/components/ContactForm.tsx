@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { contactConfig } from "@/config/contact";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -132,7 +133,7 @@ export default function ContactForm() {
                   setFormData({ ...formData, phone: e.target.value })
                 }
                 className={inputClasses}
-                placeholder="+48 517 740 099"
+                placeholder={contactConfig.phone}
               />
             </div>
 
@@ -170,7 +171,7 @@ export default function ContactForm() {
                 <p className="text-center text-sm text-brand-green-dark mt-4">Thank you! We'll reply within 24 hours.</p>
               )}
               {status === "error" && (
-                <p className="text-center text-sm text-red-600 mt-4">Something went wrong. Please email us at contact@applesfromturkey.com.</p>
+                <p className="text-center text-sm text-red-600 mt-4">Something went wrong. Please email us at {contactConfig.email}.</p>
               )}
             </div>
           </form>

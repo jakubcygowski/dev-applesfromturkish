@@ -1,3 +1,5 @@
+import { whatsappUrl } from "@/config/contact";
+
 const stats = [
   {
     icon: (
@@ -132,7 +134,7 @@ export default function HeroSection() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://wa.me/48517740099?text=Hello%2C%20I'm%20interested%20in%20Turkish%20apples."
+              href={whatsappUrl()}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-green-500 text-white font-semibold px-8 py-4 rounded-full text-lg shadow-lg shadow-green-500/20 hover:bg-green-600 transition-colors duration-300"
