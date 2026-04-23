@@ -107,10 +107,21 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Apples from Turkey. All rights
               reserved.
             </p>
-            <div className="flex gap-6">
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
               <a href="/privacy-policy" className="hover:text-white transition-colors duration-300">
                 Privacy Policy
               </a>
+              <p>
+                Developed by{" "}
+                <a
+                  href="https://www.linkedin.com/in/eryk-witkowski/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/90 hover:text-white underline underline-offset-2 transition-colors duration-300"
+                >
+                  Eryk Witkowski
+                </a>
+              </p>
             </div>
           </div>
         </div>
