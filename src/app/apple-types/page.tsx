@@ -220,14 +220,16 @@ export default function AppleTypesPage() {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mt-2">
               {appleVarieties.map((apple) => (
                 <div key={apple.slug} className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
-                  <div className="relative aspect-[4/3] bg-gradient-to-b from-gray-50 to-white flex items-center justify-center overflow-hidden">
-                    <Image
-                      src={apple.image}
-                      alt={`${apple.name} apple`}
-                      fill
-                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                      className="object-contain scale-[2.5]"
-                    />
+                  <div className="aspect-[4/3] bg-gradient-to-b from-gray-50 to-white flex items-center justify-center overflow-hidden">
+                    <div className="relative w-[250%] h-[250%]">
+                      <Image
+                        src={apple.image}
+                        alt={`${apple.name} apple`}
+                        fill
+                        sizes="(max-width: 640px) 125vw, (max-width: 1024px) 83vw, 50vw"
+                        className="object-contain"
+                      />
+                    </div>
                   </div>
                   <div className="px-4 pb-4 pt-2">
                     <span className="block text-sm font-bold text-gray-900 mb-1">{apple.name}</span>
