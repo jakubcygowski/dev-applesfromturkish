@@ -86,6 +86,7 @@ export default function HeroSection() {
           fill
           priority
           fetchPriority="high"
+          quality={65}
           sizes="50vw"
           className="object-cover object-center"
         />
@@ -104,7 +105,8 @@ export default function HeroSection() {
             fill
             priority
             fetchPriority="high"
-            sizes="100vw"
+            quality={65}
+            sizes="(max-width: 640px) 100vw, 640px"
             className="object-cover object-center"
           />
           {/* Gradient fade on bottom edge */}
